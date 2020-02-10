@@ -21,6 +21,7 @@ Route::get('/posts/create', 'PostController@create');
 Route::post('/posts', ['as' => 'store-post', 'uses' => 'PostController@store']);
 
 
+Route::get('/posts/tags/{tag}', 'TagController@index');
 Route::get('/posts/{id}', ['as' => 'single-post', 'uses' => 'PostController@show']);
 
 Route::post('/posts/{id}/comments', ['as' => 'comment-post', 'uses' => 'CommentController@store']);
@@ -35,4 +36,3 @@ Route::get('/logout', 'LoginController@destroy');
 Route::get('/users/{id}', 'UserController@show');
 
 Route::get('/send/mail', 'PostController@mail');   //prinudno post controller
-Route::get('/posts/tags/{tag}', 'TagController@index');

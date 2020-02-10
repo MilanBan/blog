@@ -18,6 +18,10 @@
             @if($post->user)
             <a herf="/users/{{$post->user_id}}"> {{ $post->user->name }}
             @endif
+            <p>Tags:</p>
+            @foreach($post->tags as $tag)
+                <p>{{ $tag->name }}</p>
+            @endforeach
         </li>
 
     @endforeach

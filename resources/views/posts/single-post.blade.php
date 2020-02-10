@@ -14,6 +14,8 @@
         </div>
         @endforeach
     @endif
+
+    
 <div><H2>Ostavi Komentar</H2></div>
     <form method="POST" action="/posts/{{$post->id}}/comments">
         @csrf
