@@ -20,7 +20,7 @@
             @endif
             <p>Tags:</p>
             @foreach($post->tags as $tag)
-                <p>{{ $tag->name }}</p>
+               <a href="/post/tags/{{ $tag->name}}"> <p>{{ $tag->name }}</p></a>
             @endforeach
         </li>
 
